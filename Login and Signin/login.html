@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in</title>
+    <script src="https://kit.fontawesome.com/4f1332504f.js" crossorigin="anonymous"></script>
+    <style>
+           *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #navbar{
+            display: flex;
+            justify-content: space-around;
+            /* background-color: rgb(116, 116, 252); */
+            padding: 10px;
+            border-top: 1px solid  rgb(97,97,97);
+            border-bottom: 1px solid ;
+        }
+        #navbar>div{
+            width: 100px;
+            padding-right: 400px;
+            padding-top: 10px;
+            font-size: 28px;
+            color: teal;
+        }
+        #navbar>img{
+            padding-right: 500px;
+            height: 50px;
+            width: 200px;
+        }
+        #form{
+            width: 400px;
+            margin: auto;
+            margin-top: 50px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        #para+p{
+            display: flex;
+            justify-content: center;
+        }
+        #para+p+p{
+            display: flex;
+            justify-content: center;
+        }
+        input[type="email"],input[type="password"],textarea{
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+            font-size: 14px;
+        }
+        input[type="submit"]{
+            display: block;
+            margin: auto;
+            padding: 10px 10px;
+            border: 1px solid rgb(200,50,89);
+            border-radius: 5px;
+            background-color:rgb(200,50,89);
+            font-weight: bold;
+            color: white;
+            width: 400px;
+        }
+        input[type="submit"]:hover{
+            background-color: rgb(200,50,89);
+            color: white;
+        }
+        input.class{
+            height: 20px;
+            width: 20px;
+        }
+        #form>h4{
+            color:  rgb(97,97,97);
+            font-size: 90%;
+        }
+        #form>p{
+            font-size: 80%;
+            color: rgb(97,97,97);
+        }
+        #form>div{
+            width: 20px;
+            height: 20px;
+            display: flex;
+            gap: 1rem;
+            /* display: block; */
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #navbar>div a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <!-- <div><a href="signup.html">Signup</a></div>
+        <div><a href="login.html">Login</a></div> -->
+        <div>
+           <a href="signup.html"> <i class="fa-solid fa-arrow-left"></i></a> 
+        </div>
+        <img src="https://www.orbitz.com/_dms/interstitial/logo.svg?locale=en_US&siteid=70201" alt="">
+    </div>
+    <form id="form"> 
+        <h2>Sign in</h2>
+        <input id="email" type="email" name="email" placeholder="Email address"> <br>
+        <input id="pass" type="password" placeholder="Password"> <br>
+
+        <h4><input type="checkbox" class="check"> Keep me signed in</h4>
+        <p>
+            Selecting this checkbox will keep you signed into your account on this device until you sign out. Do not select this on shared devices.</p>
+       <p>
+        By creating an account, I agree to the Orbitz <a href="T&C">Terms and Conditions</a>, <a href="PrivacyStatement"> Privacy Statement</a> and <a href="Orbitz"> Orbitz Rewards Terms and Conditions.</a>
+       </p> 
+        <input type="submit" value="Sign in" id="para">
+            <p>Don't have an account?  <a href="signup.html">Create one</a></p>
+            <p>or continue with</p>
+        <div>
+            <img src="https://a.travel-assets.com/egds/marks/apple.svg" alt="">
+            <img src="https://a.travel-assets.com/egds/marks/facebook.svg" alt="">
+        </div>
+    </form>
+</body>
+</html>
+<script>
+    document.querySelector("form").addEventListener("submit", loginFun);
+    var regdUsers = JSON.parse(localStorage.getItem("userCreds"));
+    
+    function loginFun(){
+        event.preventDefault();
+        var enteredEmail = document.querySelector("#email").value;
+        var enteredPass = document.querySelector("#pass").value;
+        console.log(email,pass);
+
+        if(enteredEmail == "" || enteredPass == ""){
+            alert("Enter all details")
+        }else{
+            var flag = false;
+            for(var i=0; i<regdUsers.length; i++){
+                console.log(regdUsers[i]);
+                if(regdUsers[i].email == enteredEmail && regdUsers[i].password == enteredPass){
+                    console.log("Login success");
+                    flag = true;
+                    alert("Login success")
+                    window.location.href = "Home.html"
+                    break;
+                }
+            }
+            if(!flag){
+                console.log("login failed")
+                alert("login failed");
+            }
+        }
+               
+    }
+</script>
