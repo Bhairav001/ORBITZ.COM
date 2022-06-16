@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product</title>
+    <style>
+        #container{
+            margin: 100px 50px 10px 300px;
+            
+        }
+        #container>div{
+            border: 1px solid red;
+            height: 450px;
+        }
+        img{
+            width: 200px;
+            height: 250px;
+            margin-top: 20px;
+        }
+        h2{
+            text-align: center;
+            background-color: red;
+            margin-left: 400px;
+        }
+        p{
+            text-align: right;
+            margin-right: 40px;
+            font-size: 30px;
+            background-color: rebeccapurple;
+        }
+        h4{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+    
+</body>
+</html>
+<script>
+    stay=[
+
+    { image:"https://images.trvl-media.com/hotels/8000000/7250000/7242500/7242492/0d763157.jpg?impolicy=resizecrop&rw=455&ra=fit",
+      name:"Sangri lo Eros",
+      Price:127, 
+      Rating:4.5/5,
+    },
+    
+    { image:"https://a.travel-assets.com/media/meso_cm/PAPI/Images/hotels/4000000/3860000/3851700/3851663/958ad657_b.jpg",
+    name:"Leela Palace",
+    Price:292, 
+    Rating:4.6/5,
+    },
+     
+    { image:"https://images.trvl-media.com/hotels/2000000/1070000/1063100/1063007/eca8a680.jpg?impolicy=resizecrop&rw=455&ra=fit",
+    name:"Trident Gurga",
+    Price:125, 
+    Rating:4.5/5,
+    },
+      
+    { image:"https://images.trvl-media.com/hotels/16000000/15240000/15233900/15233833/b02869f0.jpg?impolicy=resizecrop&rw=455&ra=fit",
+    name:"Haveli Dharampura",
+    Price:132, 
+    Rating:4.5/5,
+    },
+       
+    { image:"https://images.trvl-media.com/hotels/7000000/6190000/6184300/6184205/8d5c5144.jpg?impolicy=resizecrop&rw=455&ra=fit",
+    name:"Boolrooms",
+    Price:127, 
+    Rating:4.5/5,
+    },
+        
+    { image:"https://images.trvl-media.com/hotels/3000000/2220000/2215100/2215082/c55ae853.jpg?impolicy=resizecrop&rw=455&ra=fit",
+    name:"Prime Balaji Delux",
+    Price:297, 
+    Rating:4.5/5,
+    },
+         
+    
+    { image:"https://images.trvl-media.com/hotels/9000000/8740000/8738300/8738241/9fdc0ad2.jpg?impolicy=resizecrop&rw=455&ra=fit",
+     name:"The oberoi Gurgaon",
+     Price:115, 
+     Rating:4.5/5,
+    },
+          
+    { image:"https://images.trvl-media.com/hotels/9000000/8740000/8738300/8738241/9fdc0ad2.jpg?impolicy=resizecrop&rw=455&ra=fit",
+     name:"Vivantha New Delhi",
+     Price:230, 
+     Rating:4.5/5,
+    },
+    
+    
+    { image:"https://images.trvl-media.com/hotels/6000000/5650000/5648500/5648455/479ab915.jpg?impolicy=resizecrop&rw=455&ra=fit",
+      name:"Hotel City star",
+      Price:493, 
+      Rating:4.5/5,
+    },
+     
+    { image:"https://images.trvl-media.com/hotels/7000000/6390000/6382300/6382233/f90787dd.jpg?impolicy=resizecrop&rw=455&ra=fit",
+    name:"IGH Hotel",
+    Price:145, 
+    Rating:4.5/5,
+    },
+      
+    ];
+
+    stay.map(function(ele,ind,arr){
+            box=document.createElement("div");
+            avtar=document.createElement("img");
+            avtar.setAttribute("src",ele.image);
+            name1=document.createElement("h2");
+            name1.innerText=ele.name;
+            Price=document.createElement("p")
+            Price.innerText=ele.Price;
+
+            Rating=document.createElement("h4")
+            Rating.innerText=ele.Rating;
+
+            
+            box.append(avtar,name1,Price,Rating);
+            document.querySelector("#container").append(box)
+        })
+        cartarr.push(stay)
+
+
+    console.log(stay)
+</script>

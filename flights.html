@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flights</title>
+    <style>
+         #navbar{
+            width: auto;
+            height: 80px;
+            background-color: #00253c;
+            display: flex;
+        }
+        img{
+            margin-top: 25px;
+            margin-left: 70px;
+        }
+        select{
+            margin-left: 50px;
+            height: 20px;
+            margin-top: 29px;
+            border: #00253c;
+            background-color: #00253c;
+            color: white;
+            text-align: start;
+            
+        }
+        option{
+            background-color: white;
+            color: #00253c;
+            width: 300px;
+
+        }
+         #heading{
+            margin-left: 5%;
+            margin-top: 5%;
+        }
+        #location{
+            width: 400px;
+            height: 40px;
+            margin-top: 20px;
+        }
+        #cheackin{
+            width: 200px;
+            height: 40px;
+            margin-left: 2%;
+        }
+        #cheackout{
+            width: 200px;
+            height: 40px;
+            margin-left: 2%;
+        }
+        #destination{
+            width: 250px;
+            height: 40px;
+            margin-left: 2%;
+
+        }
+        #box{
+            margin-left: 5%;
+            margin-top: 2%;
+        }
+        button{
+            margin-left: 5%;
+            height: 40px;
+            width: 200px;
+            margin-top: 25px;
+            border: #c83259;
+            background-color: #c83259;
+            transition: 0.075;         
+        }
+        .btn{
+            width: 110px;
+            background-color: #b2d8dd;
+            margin-left: 0px;
+            margin-right: 5px;
+            height: 45px;
+        }
+         #myselect{
+            margin-left: 615px;
+            color: #00a9d4;
+            border: 1px solid white;
+        }
+        #select{
+            color: #00a9d4;
+            border: 1px solid white;
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <div><img src="https://www.orbitz.com/_dms/header/logo.svg?locale=en_US&siteid=70201&2" alt=""></div>
+       <select name="links" id="" size="1" onchange="window.location.href=this.value;">
+        <option value="More travel">more travel</option>
+        <option value="http://127.0.0.1:5500/unit-2/sprint-4/optional/stays.html">Stays</option>
+            <option value="http://127.0.0.1:5500/unit-2/sprint-4/optional/flights.html">Flights</option>
+            <option value="http://127.0.0.1:5500/unit-2/sprint-4/optional/packages.html">Packages</option>
+            <option value="http://127.0.0.1:5500/unit-2/sprint-4/optional/cars.html">Car</option>
+            <option value="http://127.0.0.1:5500/unit-2/sprint-4/optional/CRUISE.html">cruise</option>
+            <option value="http://127.0.0.1:5500/unit-2/sprint-4/optional/things%20to%20do.html">Things to Do</option>
+            <option value="https://www.orbitz.com/Deals">Deals</option>
+            <option value="https://groups.orbitz.com/Group-Rate/?locale=en_US&ol=1">groups&meeting</option>
+            <option value="https://www.orbitz.com/blog/">Travel Vlog</option>
+       </select>
+        
+
+    </div>
+    <div id="heading"><h1>Find And Compair Flights</h1>
+        <button class="btn">Round trip</button><button class="btn">One Way</button><button class="btn">Multi City</button>
+        <select name="select" id="myselect">
+            <option value="select">travellers</option>
+        </select>
+        <select name="select" id="select">
+            <option value="">Economy</option>
+            <option value="">premium class</option>
+            <option value="">Buisness class</option>
+            <option value="">first class</option>
+        </select>
+        <br>
+        <input id="location" type="text" placeholder="Leaving for">
+        <input type="text" name="" id="destination" placeholder="Going">
+    <input type="date" name="cheackin" placeholder="cheack in" id="cheackin">
+    <input type="date" name="cheackout" id="cheackout" placeholder="check out">
+    </div>
+    <div><input type="checkbox" name="cheackbox" id="box">Add a Flight <input type="checkbox" name="checkbox" id="box">Add a Car</div>
+      <div><button>Search</button></div>
+    
+</body>
+</html>
