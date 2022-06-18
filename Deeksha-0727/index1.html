@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORBITZ</title>
+    <!-- <link rel="stylesheet" href="index.css" /> -->
+    <style>
+    
+#india{
+    border:transparent;
+}
+
+
+
+            #navbar{
+                width:auto;
+               height: 100px;
+           /* background-color: blue; */
+           display:grid;
+           grid-template-columns: repeat(6, auto);
+           grid-template-rows: repeat(1, auto);
+           gap:20px;
+           justify-content: space-around;
+           background-color: #00253c;
+          }
+
+   
+        #sudhirselect{
+            background-color:#00253c;
+            color: white;
+        }
+
+        #sudhirselect>option{
+            color:teal;
+            background-color: white;
+        }
+      #photo{
+        width:100%;
+            height:50px;
+            /* border: 1px solid red; */
+
+      }  
+#pic{
+            width:100%;
+            height:auto;
+            margin-top:20px;
+            margin-left: 50px;
+      /* border:2px solid black; */
+    
+        }
+
+     #mainbox{
+/* border: 1px solid red; */
+width:240px;
+height:50px;
+background-color:#00253c ;
+
+
+margin-left:11%
+}
+ #bar {
+            display:flex;
+            font-size: 20px;
+        /* border: 1px solid red; */
+        margin-left: 700px;
+        margin-top: 20px;
+     
+        }
+
+        p {
+            margin-left: 20px;
+        }
+
+        a {
+            color: white;
+     
+        }
+
+
+
+
+        #heading {
+            margin-left: 5%;
+            margin-top: 5%;
+
+        }
+
+        #location {
+            width: 400px;
+            /* height: 40px; */
+        }
+
+        #cheackin {
+            width: 200px;
+            /* height: 40px; */
+            margin-left: 2%;
+        }
+
+        #cheackout {
+            width: 200px;
+            /* height: 40px; */
+            margin-left: 2%;
+        }
+
+        #travellers {
+            width: 250px;
+            /* height: 40px; */
+            margin-left: 2%;
+
+        }
+
+        #box {
+            margin-left:5%;
+            margin-top:2%;
+            /* height: 18px; */
+            width:18px
+        }
+
+      #sudbut {
+            margin-left: 5%;
+            height: 40px;
+            width: 200px;
+            display: block;
+            margin: auto;
+            margin-top: 25px;
+            /* border: #c83259; */
+            background-color: #c83259;
+            transition: 0.075;
+            color: white;
+        }
+
+        #firstpic {
+            /* border: 1px solid red; */
+            background-image: url("https://forever.travel-assets.com/flex/flexmanager/images/2021/11/01/ORB_Storefront_6_imgB_1400x600_20211028.jpg");
+            width: 100%;
+            margin-top:0px;
+            background-position: center;
+            position: relative;
+            background-size: cover;
+            background-repeat: no-repeat;
+            bottom: 0;
+            height: 800px;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+           margin-bottom:5%;
+            /* display: flex; */
+        }
+
+        #border12 {
+               width:80%;
+            /* border:5px solid red; */
+            margin-top: 150px;
+            margin-left: 220px;
+            background-color: white;
+            padding: 20px;
+        }
+
+
+
+
+        #main {
+            width:80%;
+            /* border:5px solid black; */
+            margin:auto;
+            margin-top:45%;
+            height: auto;
+
+        }
+
+
+        #one {
+            /* border: 1px solid red; */
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(1, auto);
+            gap: 40px;
+            margin: auto;
+            margin-top: 20px;
+
+        }
+
+        #one>div {
+            width: 100%;
+            /* border: 2px solid orange; */
+            height: auto;
+            box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+
+
+        }
+
+        #one>div>img:nth-child(1) {
+            width: 100%;
+        }
+
+        #one>div>img:nth-child(2) {
+            width: 100%
+        }
+
+        #one>div>img:nth-child(3) {
+            width: 100%
+        }
+
+        #onlyForh1 {
+            /* border: 1px solid blue; */
+            margin-top: 20px;
+            font-size: 20px;
+        }
+
+        #two {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(1, 220px);
+            gap: 20px;
+
+        }
+
+        #two>div {
+            /* border: 5px saddlebrown; */
+        }
+
+
+
+        #two>div:nth-child(1) {
+            background-image: url("https://forever.travel-assets.com/flex/flexmanager/images/2021/11/02/ORB_Storefront_LastMinute_imgB_900x600_20211101.jpg?impolicy=fcrop&w=900&h=600&q=mediumHigh");
+            background-position: center;
+            position: relative;
+            height: 220px;
+            width: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        #two>div:nth-child(2) {
+            background-image: url("https://forever.travel-assets.com/flex/flexmanager/images/2021/11/02/ORB_Storefront_AllInclusive_imgB_900x600_20211101.jpg?impolicy=fcrop&w=900&h=600&q=mediumHigh");
+            background-position: center;
+            position: relative;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        #two>div:nth-child(3) {
+            background-image: url("https://forever.travel-assets.com/flex/flexmanager/images/2021/11/02/ORB_Storefront_MOD_imgB_900x600_20211101.jpg?impolicy=fcrop&w=900&h=600&q=mediumHigh");
+            background-position: center;
+            position: relative;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        #two>div:nth-child(4) {
+            background-image: url("https://forever.travel-assets.com/flex/flexmanager/images/2021/11/02/ORB_Storefront_JetAndReset_imgB_900x600_20211101.jpg?impolicy=fcrop&w=900&h=600&q=mediumHigh");
+            background-position: center;
+            position: relative;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        #two>div>h2 {
+            text-align: left;
+            position: absolute;
+            top: 80%;
+            left: 25%;
+            right: 25%;
+            font-size: 16px;
+            transform: translate(-50%, -50%);
+            color: white;
+        }
+
+        #two>div>p~p {
+            position: absolute;
+            top: 87%;
+            left: 5%;
+            bottom: 10px;
+            font-size: 14px;
+            color: white;
+        }
+
+
+        #three {
+            /* border: 2px solid red; */
+            margin-top: 30px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(1, 400px);
+            gap: 20px;
+            color: teal;
+
+        }
+
+        #three>div>img {
+            height: 400px;
+            width: 100%;
+
+        }
+
+        #three>div>img+h2 {
+         margin-top: 0px;
+            font-size:12px;
+            margin-bottom: 10px;
+        }
+
+        #fourh1 {
+            margin: 10px;
+            font-size: 20px;
+        }
+
+        #four {
+            /* border: 1px solid blue; */
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(1, 100px);
+            gap: 10px;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        }
+
+        #four>div {
+              border: transparent;
+            padding: 4px;
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+        }
+        #four>div>h2 {
+            /* border: 2px solid pink; */
+            color: black;
+            font-size: 20px;
+            padding: 5px;
+        }
+
+        #four>div>h2+p {
+            /* border: 5px solid red; */
+            font-size: 20px;
+        }
+
+#fiveh1{
+    font-size:20px;
+}
+
+
+#five {
+    margin-top: 20px;
+    /* border: 5px solid purple; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1,auto);
+    gap: 20px;
+
+}
+
+#five>div {
+    border: transparent;
+}
+#five>div:nth-child(1){
+    background-image: url("https://forever.travel-assets.com/flex/flexmanager/images/2021/11/18/ORB_Blog_NationalParks_imgB_1199x399_20211117.jpg");
+    height: 300px;
+    width: 100%;
+    background-position: center;
+    position:relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#five>div:nth-child(2){
+    background-image: url("https://forever.travel-assets.com/flex/flexmanager/images/2021/11/18/ORB_Blog_RoadTrips_imgB_1199x399_20211117.jpg");
+    height: 300px;
+    width: 100%;
+   background-position: center;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#five>div>h2{
+    text-align: left;
+    position: absolute;
+   background-color: rgba(0,0,0, 0.2);
+    top: 40%;
+    left: 15%;
+    font-size:18px;
+    transform: translate(-50%, -50%);
+    color: white;
+
+}
+#five>div>p{
+   position: absolute;
+    top: 47%;
+    background-color: rgba(0,0,0, 0.2);
+    left: 2%; 
+    font-size: 14px;
+    color: white;
+}
+.bt1{
+    position: absolute;
+    top: 57%;
+    font-size: 20px;
+    width: 140px;
+    padding:2px;
+    font-weight: bold;
+    left: 1.5%; 
+    font-size: 20px;
+    color: teal; 
+    background-color: white;
+}
+#six {
+    /* border: 2px solid green; */
+    height:150px;
+    width: 60%;
+    margin: auto;
+    margin-top: 50px;
+
+}
+#six>img {
+    width: 100%;
+    height: 100%;
+
+}   
+
+#seven{
+margin-top: 40px;
+/* border: 5px solid black; */
+display: grid;
+grid-template-columns:repeat(3, auto);
+grid-template-rows: repeat(1, auto);
+gap:20px;
+box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+#seven>div{
+/* border: 1px darkgoldenrod; */
+box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+
+}
+#seven>div>img{
+width:100%;
+height:100%;
+
+}
+
+#seven>div>p+img{
+width:70%;
+height:60%;
+
+}
+
+#seven>div>h1{
+font-size:45px;
+padding: 10px;
+
+}
+
+#seven>div>h1~ul{
+font-size: 20px;
+line-height: 20px;
+color: grey;
+padding-bottom: 10px;
+}
+
+
+ul+h2{
+margin-top: 5px;
+line-height:30px;
+font-size:40px;
+}
+
+input{
+margin-top:30px;
+size:50%;
+width:25%;
+height: 50px;
+}
+
+
+#button{
+height:50px;
+background-color: red;
+color: white;
+font-weight: bold;
+width:25% ;
+padding:5px;
+font-size: 15px;
+
+}
+#button+p{
+    margin-top: 20px;
+font-size:18px;
+color: gray;
+line-height: 20px;
+}
+
+#seven>h1{
+font-weight: bold;
+padding-bottom: 20px;
+font-size: 30px;
+}
+
+#seven>div>h1~ul{
+font-size: 20px;
+line-height: 20px;
+color: grey;
+padding-bottom: 10px;
+}
+
+
+ul+h2{
+margin-top: 5px;
+line-height:30px;
+font-size:40px;
+}
+
+input{
+margin-top:30px;
+size:50%;
+width:25%;
+height: 50px;
+}
+
+
+#button{
+height:50px;
+background-color: red;
+color: white;
+font-weight: bold;
+width:25% ;
+padding:5px;
+font-size: 15px;
+
+}
+#button+p{
+    margin-top: 20px;
+font-size:18px;
+color: gray;
+line-height: 20px;
+}
+
+#seven>h1{
+font-weight: bold;
+padding-bottom: 20px;
+font-size: 30px;
+}
+
+#eight{
+display:grid;
+grid-template-columns: repeat(3, 1fr);
+grid-template-rows:repeat(2,auto);
+gap:20px;
+/* border:5px solid violet; */
+}
+
+#eight>div{
+/* border:2px green; */
+font-size:80px;
+width:40%;
+background-color:white;
+color: #c83259;
+
+}
+
+select{
+    border: 5px solid red;
+font:20px;
+margin: 15px 0px;
+font-size:20px;
+padding:10%;
+font-weight: bold;
+border: transparent;
+box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+select>option{
+    color: teal;
+}
+
+
+#nine{
+margin-top: 50px;
+/* border: 2px solid red; */
+display:grid;
+grid-template-columns: repeat(5,auto);
+grid-template-rows: repeat(1, 400px);
+gap: 20px;
+margin-bottom: 50px;
+}
+
+
+
+#nine>div>h2{
+font-weight: bolder;
+font-size:20px;
+
+}
+
+#nine>div>h2~p{
+margin-top: 20px;
+color: teal;
+line-height: 20px;
+font-size: 18px;
+}
+
+#nine>div>img{
+margin-top:10px;
+width: 100%;
+}
+
+
+#ten{
+/* border: 1px solid orange; */
+width: 60%;
+line-height:20px;
+color: gray;
+text-align: center;
+margin: auto;
+margin-top: 30px;
+font-size: 16px;
+font-weight: bolder;
+}
+
+
+
+
+        
+    </style>
+</head>
+
+<style>
+
+</style>
+
+<body>
+    
+
+
+
+      <div id="india">  
+        <div id="firstpic">
+         <div id="navbar">
+
+                <div id="pic">
+            <img id="photo" src="https://www.orbitz.com/_dms/header/logo.svg?locale=en_US&siteid=70201&2" alt="">
+                     </div>
+
+
+                   <div id="mainbox">
+                   <select id="sudhirselect" name="links" size="1" onchange="window.location.href=this.value;">
+                       <option value="More travel">More travel</option>
+                       <option value="stays.html">Stays</option>
+                       <option value="flights.html">Flights</option>
+                       <option value="packages.html">Packages</option>
+                       <option value="cars.html">Car</option>
+                       <option value="CRUISE.html">cruise</option>
+                       <option value="thingstodo.html">Things to Do</option>
+                       <option value="https://www.orbitz.com/Deals">Deals</option>
+                       <option value="https://groups.orbitz.com/Group-Rate/?locale=en_US&ol=1">groups&meeting</option>
+                       <option value="https://www.orbitz.com/blog/">Travel Vlog</option>
+                   </select>
+                </div>
+
+                   <div id="bar">
+                       <p><a href="listproperty.html">List your Property</a></p>
+                       <p><a href="support.html">Support</a></p>
+                       <p><a href="login.html">Log in</a></p>
+                       <p><a href="signin.html">Sign in</a></p>
+                   </div>
+                   
+               </div>
+
+
+
+<div id="imp">
+                <div id="border12">
+                    <div id="heading">
+                        <h1>Search Stays</h1>
+                        <input id="location" type="text" placeholder="Going to">
+                        <input type="date" name="cheackin" placeholder="cheack in" id="cheackin">
+                        <input type="date" name="cheackout" id="cheackout" placeholder="check out">
+                        <input type="text" id="travellers" placeholder="travelers">
+                    </div>
+                    <div><input type="checkbox" name="cheackbox" id="box">Add a Flight <input type="checkbox"
+                            name="checkbox" id="box">Add a Car</div>
+                    <div><button id="sudbut">Search</button></div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div id="main">
+            <div id="one">
+                <div>
+                    <img src="https://forever.travel-assets.com/flex/flexmanager/images/2022/02/09/ORB_BrandPromise_TravelAsYouAre_imgB_840x473_20220207.jpg?impolicy=fcrop&w=900&h=386&q=mediumHigh"
+                        alt="">
+                </div>
+                <div>
+                    <img src="https://forever.travel-assets.com/flex/flexmanager/images/2022/02/09/ORB_BrandPromise_Rewards_imgB_840x473_20220207.jpg?impolicy=fcrop&w=900&h=386&q=mediumHigh"
+                        alt="">
+                </div>
+                <div>
+                    <img src="https://forever.travel-assets.com/flex/flexmanager/images/2022/02/09/ORB_BrandPromise_InsiderPrices_imgB_840x473_20220207.jpg?impolicy=fcrop&w=900&h=386&q=mediumHigh"
+                        alt="">
+                </div>
+            </div>
+
+
+            <div id="onlyForh1">
+                <h1>Featured Offers</h1>
+            </div>
+
+
+            <div id="two">
+                <div>
+                    <p></p>
+                    <h2>Last minute deals</h2>
+                    <p>Gateway today</p>
+                </div>
+
+                <div>
+                    <p></p>
+                    <h2>All inclusive resorts</h2>
+                    <p>Enjoy sun and fun</p>
+                </div>
+
+                <div>
+                    <p></p>
+                    <h2>Insiders prices</h2>
+                    <p>Members gets rewarded</p>
+                </div>
+
+
+                <div>
+                    <p></p>
+                    <h2>Jet and Reset</h2>
+                    <p>Fly somewhere beachy and warm</p>
+                </div>
+            </div>
+
+
+
+
+            <div id="three">
+                <div>
+                    <img src="https://forever.travel-assets.com/flex/flexmanager/images/2020/12/03/ORB_Storefront_Deals_2740x1484-V1.jpg"
+                        alt="">
+                    <h2>Today's top deal</h2>
+                </div>
+            </div>
+
+
+
+
+
+
+            <div id="fourh1">
+                <h1>Here to help keep you on the move</h1>
+            </div>
+<div id="four">
+                <div>
+                    <h2> Change or cancel a trip</h2>
+                    <p>Make updates to your initerary or cancel a booking</p>
+                </div>
+                <div>
+                    <h2>Use a credit or coupon</h2>
+                    <p>Apply a code or credit to a new trip</p>
+                </div>
+                <div>
+                    <h2>Track your refund</h2>
+                    <p> Check the status of a refund currently in progress</p>
+                </div>
+            </div>
+
+
+
+
+            <div id="fiveh1">
+                <h1>Traveling tips</h1>
+            </div>
+
+            <div id="five">
+                <div>
+                    <h2>National Parks</h2>
+                    <p>There is plenty to keep you busy</p>
+                    <button class="bt1">Learn More</button>
+                </div>
+
+                <div>
+                    <h2>Perfect road trip</h2>
+                    <p>Find an adventure for every season</p>
+                    <button class="bt1">Read on</button>
+                </div>
+            </div>
+
+
+
+
+            <div id="six">
+                <img src="https://tpc.googlesyndication.com/simgad/10056509806482740393?" alt="">
+            </div>
+
+
+            <div id="seven">
+                <div>
+                    <img src="https://a.travel-assets.com/mad-service/footer/marquee/ORB_App_Footer_v1.jpg" alt="">
+                </div>
+                <div>
+                    <h1>Rewards are waiting for you in the Orbitz app</h1>
+                    <ul>
+                        Earn 4% back when you book your hotel in app, vs. 3% on site</ul>
+                    <ul>Get flight status and gate number notifications</ul>
+                    <ul>
+                        Have questions about your stay? Message your hotel right in the app</ul>
+                    <h2>Text yourself a download link</h2>
+                    <input type="number" placeholder="country code">
+                    <input type="number" placeholder="phone number">
+                    <button id="button">Get the app</button>
+                    <p>By providing your number, you agree to receive a one-time automated text message with a link to
+                        get the app. Standard text message rates may apply.</p>
+                </div>
+
+                <div>
+                    <p></p>
+                    <img src="https://a.travel-assets.com/mad-service/qr-code/portfolio_app_landing/qr_app_landing_footer_orbitz.png"
+                        alt="">
+                    <h2>Scan the QR code</h2>
+                </div>
+            </div>
+
+
+            <h1>More Destinations</h1>
+            <div id="eight">
+
+                <div>
+                    <select>
+                        <option value="">Destination deals</option>
+                        <option value="Flights under $200"> Flights under $200</option>
+                        <option value="Travel deals">Travel deals</option>
+                        <option value="Hotels under $100">Hotels under $100</option>
+                        <option value="Orbitz hotel coupon">Orbitz hotel coupon</option>
+                        <option value="All our destinations">All our destinations</option>
+                        <option value="Orbitz hotel coupon">Orbitz hotel coupon</option>
+                        <option value="Car rentals deal">Car rentals deal</option>
+                        <option value="Vacation Package deals">Vacation Package deals</option>
+                        <option value="Vacation Package deals">Vacation Package deals</option>
+                    </select>
+                </div>
+
+
+                <div>
+                    <select>
+                        <option value="">Top hotel beach destination</option>
+                        <option value="Atlantic city hotels">Atlantic city hotels</option>
+                        <option value="Lahaina hotels">Lahaina hotels</option>
+                        <option value="San Diego hotels">San Diego hotels</option>
+                        <option value="Honolulu hotels"> Honolulu hotels</option>
+                        <option value="Myrtle beach hotels">Myrtle beach hotels</option>
+                        <option value="Virginia Beach hotels">Virginia Beach hotels</option>
+                    </select>
+                </div>
+
+                <div>
+                    <select name="" id="">
+                        <option value=""> Top hotel city destination</option>
+                        <option value="Austin hotels">Austin hotels</option>
+                        <option value="Chicago hotels">Chicago hotels</option>
+                        <option value="Dallar hotels">Dallar hotels</option>
+                        <option value="Houstan hotels">Houstan hotels</option>
+                        <option value="Scottscale hotels">Scottscale hotels</option>
+                        <option value="Las Vegas hotels"> Las Vegas hotels</option>
+                        <option value="Nashville hotels">Nashville hotels</option>
+                        <option value="New orlean hotels"> New orlean hotels</option>
+                        <option value="Phoenix hotels">Phoenix hotels</option>
+                    </select>
+                </div>
+
+
+                <div>
+                    <select name="" id="">
+                        <option value="">Top vacation Destination</option>
+                        <option value="Carribbean vacation"> Carribbean vacation</option>
+                        <option value="Mexico vacation">Mexico Vacation</option>
+                        <option value="New York Vacation"> New York Vacation</option>
+                        <option value="Las Vegas Vacation"> Las Vegas Vacation</option>
+                        <option value="Disneyland Packages">Disney Packages</option>
+                        <option value="Costa Rica Vacation"> Costa Rica Vacation</option>
+                        <option value="Orlando Vacations">Orlando Vacations</option>
+                        <option value="Colorado Vacations"> Colorado vacation</option>
+                        <option value="Hawaii Vocation"> Hawaii Vocation</option>
+                        <option value="Miami Vocation">Miami Vocation</option>
+                        <option value="Punta Luna Vacation"> Punta Luna Vacation</option>
+                        <option value="Cancun Vocation">Cancun Vocation</option>
+                        <option value="Florida Vocation">Florida Vocation</option>
+                        <option value="Key West Vacation">Key West Vacation</option>
+                    </select>
+                </div>
+
+
+
+                <div>
+                    <select name="" id="">
+                        <option value="">Top flight destination</option>
+                        <option value="Flight to Las Vegas">Flight to Las Vegas</option>
+                        <option value="Flight to Las Angels">Flight to Las Angels</option>
+                        <option value="Flight to San Diego">Flight to San Diego</option>
+                        <option value="Flight to Denver">Flight to Denver</option>
+                        <option value="Flight to Washington ">Flight to Washington</option>
+                        <option value="Flight to Minneapolis to St paul"> Flight to Minneapolis to st paul</option>
+                        <option value="Flight to Atlantic City"> Flight to Atlantic City</option>
+                        <option value="Flight to New York"> Flight to New York</option>
+                        <option value="Flight to Chicago"> Flight to Chicago</option>
+                        <option value="Flight to Seatle"> Flight to Seatle</option>
+                        <option value="Flight btio Buston">Flight to Buston</option>
+                        <option value="Alight to Salt Lake City">Align to Salt Lake City </option>
+                        <option value="Flight to Rio"> Flight to Rio</option>
+                    </select>
+                </div>
+
+
+
+                <div>
+                    <select name="" id="">
+                        <option value="">Top car rentals in America</option>
+                        <option value="Car Rentals in Atlanta"> Car Rentals in Atlanta</option>
+                        <option value="Car Rentals in Chicago"> Car Rentals in Chicago</option>
+                        <option value="Car Rentals in Dallas">Car Rentals in Dallas</option>
+                        <option value="Car Rental in Dullas"> Car Rental in Dullas</option>
+                        <option value="Car Rentals in Detroit"> Car Rentals in Detroit</option>
+                        <option value="Car Rentals Las Vegas">Car Rentals Las Vegas</option>
+                        <option value="Car Rentals New Orleans">Car Rentals New Orleans</option>
+                        <option value="Car Rentals Philadelphia">Car Rentals Philadelphia</option>
+                        <option value="Car Rentals Tampa"> Car Rentals Tampa</option>
+                        <option value="Car Rentals Boston"> Car Rentals Boston</option>
+                        <option value=" Car Rentals Cincinnati "> Car Rentals Cinicinnati</option>
+                        <option value="Car Rentals Denever"> Car Rentals Denever</option>
+                        <option value="Car Rentals Houston"> Car Rentals Houston</option>
+                        <option value="Car Rentals Miami"> Car Rentals Miami</option>
+                        <option value="Car Rentals New York City">Car Rentals New York City</option>
+                        <option value="Car Rentals Palm Spring"> Car Rentals Palm Spring</option>
+                        <option value="Car Rentals San Diego">Car Rentals San Diego</option>
+                        <option value="Car Rentals Washington DC"> Car Rentals Washington DC</option>
+                    </select>
+                </div>
+            </div>
+
+
+
+
+
+            <div id="nine">
+                <div>
+                    <img src="https://a.travel-assets.com/globalcontrols-service/content/f285fb631b0a976202ef57611c7050e9ef5ca51a/images/EG_Wordmark_blue_RGB.svg"
+                        alt="">
+                </div>
+
+                <div>
+                    <h2>Company</h2>
+                    <p>About</p>
+                    <p>Jobs</p>
+                    <p>List Your Property</p>
+                    <p>Partnership</p>
+                    <p>New Room</p>
+                    <p>Investor Relation</p>
+                    <p>Site Map</p>
+                    <p>Orbitz Rewards</p>
+                    <p> Adverstising</p>
+                </div>
+                <div>
+                    <h2>Explore</h2>
+                    <p>Hotels in USA</p>
+                    <p>Vocation Rentals in USA</p>
+                    <p>Car Rentals in USA</p>
+                    <p>Domestic Flights</p>
+                    <p>Orbitz Reviews </p>
+                    <p>Orbitz Coupons</p>
+                    <p>LGBTQ Travel</p>
+                    <p>Travel Blog</p>
+                    <p>Unique Dccom</p>
+                </div>
+                <div>
+                    <h2>Policies</h2>
+                    <p>Terms Of Use</p>
+                    <p>Vrbo Terms && Conditions applied</p>
+                    <p>Orbitz Rewards Terms</p>
+                    <p>Donot sell my personal information</p>
+
+                </div>
+                <div>
+                    <h2>Help</h2>
+                    <p>Support</p>
+                    <p>Cancel your hotel booking</p>
+                    <p>Cancel your Flights</p>
+                    <p>Refund timelines policies and process</p>
+                    <p>Use an Orbitz Coupon</p>
+                </div>
+            </div>
+
+            <hr>
+
+            <div id="ten">
+                <p>© 2022 Orbitz, LLC, an Expedia Group Company. All rights reserved.</p>
+                <p>Orbitz, Orbitz.com, and the Orbitz logo are trademarks or registered trademarks of Orbitz, LLC. CST#
+                    2083930-50.</p>
+            </div>
+
+
+
+        </div>
+        </div>
+</body>
+
+</html>
