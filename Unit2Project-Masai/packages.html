@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flights</title>
+    <style>
+         #navbar{
+            width: auto;
+            height: 100px;
+            background-color: #00253c;
+            display: flex;
+        }
+        img{
+            margin-top: 25px;
+            margin-left: 70px;
+        }
+        select{
+            margin-left: 50px;
+            height: 20px;
+            margin-top: 40px;
+            border: #00253c;
+            background-color: #00253c;
+            color: white;
+            text-align: start;
+            font-size: 15px;
+            
+        }
+        option{
+            background-color: white;
+            color: #00253c;
+            width: 300px;
+
+        }
+         #heading{
+            margin-left: 5%;
+            margin-top: 5%;
+        }
+       
+        
+        #location{
+            width: 400px;
+            height: 40px;
+            margin-top: 20px;
+        }
+        #cheackin{
+            width: 200px;
+            height: 40px;
+            margin-left: 2%;
+        }
+        #cheackout{
+            width: 200px;
+            height: 40px;
+            margin-left: 2%;
+        }
+        #destination{
+            width: 250px;
+            height: 40px;
+            margin-left: 2%;
+
+        }
+        #box{
+            margin-left: 5%;
+            margin-top: 2%;
+        }
+        button{
+            margin-left: 5%;
+            height: 40px;
+            width: 200px;
+            margin-top: 25px;
+            border: #c83259;
+            background-color: #c83259;         
+        }
+        .btn{
+            width: 120px;
+            background-color: #b2d8dd;
+            margin-left: 0px;
+            margin-right: 5px;
+            height: 35px;
+            border-radius: 100px;
+        }
+         #myselect{
+            margin-left: 615px;
+            color: #00a9d4;
+            border: 1px solid white;
+        }
+        #select{
+            color: #00a9d4;
+            border: 1px solid white;
+        }
+        #main{
+            display: flex;
+            align-items: center;
+            margin-top: 5%;
+           
+            background-color: #f5f5f5;
+        }
+        #div1{
+            height: 300px;
+            width: 70%;
+            margin-left: 2%; 
+        }
+        #border{
+            background-color: #f5f5f5;
+        }
+        #div1>img{
+            height: 200px;
+            width: 100%;
+            background-color: white;
+            
+        }
+      
+        div>img{
+            width: 100px;
+            height: 40%;
+        }
+        #div2{
+           
+            display: flex;
+            margin-right: 5%;
+            margin-left: 1%;
+        }#div2>div{
+           
+            width: 250px;
+            height: 300px;
+        }
+       
+        #div2>div>img{
+            width: 150px;
+            height: 148px;
+        }
+        #poster{
+            width: 95%;
+            height: 500px;
+            margin-left: 2.5%;
+          
+        }
+        div>h2{
+            margin-left: 5%;
+        
+        }
+        #travel>img{
+            width: 350px;
+           
+        }
+        #vacation>img{
+            width: 120px;
+            height: 120px;
+            margin-right: 20px;
+        }
+        #bar{
+        display: flex;
+        color: white;
+        margin-left: 500px;
+       
+        margin-top: 20px;
+        font-size: 20px;
+       }
+       p{
+        margin-left: 20px;
+       }
+       a{
+        color: white;
+        text-align: center;
+       }
+        
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <div><img src="https://www.orbitz.com/_dms/header/logo.svg?locale=en_US&siteid=70201&2" alt=""></div>
+       <select name="links" id="" size="1" onchange="window.location.href=this.value;">
+        <option value="More travel">more travel</option>
+        <option value="stays.html">Stays</option>
+            <option value="flights.html">Flights</option>
+            <option value="packages.html">Packages</option>
+            <option value="cars.html">Car</option>
+            <option value="CRUISE.html">cruise</option>
+            <option value="thingstodo.html">Things to Do</option>
+            <option value="Deals">Deals</option>
+            <option value="https://groups.orbitz.com/Group-Rate/?locale=en_US&ol=1">groups&meeting</option>
+            <option value="https://www.orbitz.com/blog/">Travel Vlog</option>
+       </select>
+       <div id="bar">
+        <p><a href="listproperty.html">List your Property</a></p>
+        <p><a href="support.html">Support</a></p>
+     
+        <p><a href="login.html">Log in</a></p>
+        <p><a href="signin.html">Sign in</a></p>
+     </div>
+        
+
+    </div>
+    
+    <div id="heading"><h1>Save with vacation packages</h1>
+        <p id="title">Choose two or more items and save on your trip:</p>
+        <button class="btn"><input type="checkbox" name="" id=""> stay Added</button><button class="btn"><input type="checkbox" name="" id=""> Flight Added</button><button class="btn"><input type="checkbox" name="" id=""> Add A Car</button>
+        <select name="select" id="myselect">
+            <option value="select">travellers</option>
+        </select>
+        <select name="select" id="select">
+            <option value="">Economy</option>
+            <option value="">premium class</option>
+            <option value="">Buisness class</option>
+            <option value="">first class</option>
+        </select>
+        <br>
+        <input id="location" type="text" placeholder="Leaving for">
+        <input type="text" name="" id="destination" placeholder="Going">
+    <input type="date" name="cheackin" placeholder="cheack in" id="cheackin">
+    <input type="date" name="cheackout" id="cheackout" placeholder="check out">
+    </div>
+    <div><input type="checkbox" name="cheackbox" id="box">I only need accommodations for part of my trip</div>
+      <div><button>Search</button></div>
+
+     
+      
+      <div id="border">
+    
+      <div id="main">
+        <div id="div1"><img src="https://forever.travel-assets.com/flex/flexmanager/images/2021/03/25/ORB_InsiderPrices_lpheroB_1680x945_20210219.jpg?impolicy=fcrop&w=900&h=386&q=mediumHigh" alt="">
+        <h3>Sunnny days, flexible Days</h3>
+        <p>when you sign up for insider prices you get acces to amazing discount on all hotel</p>
+    </div>
+        <div id="div2">
+            <div>
+                <img src="https://forever.travel-assets.com/flex/flexmanager/images/2022/03/31/ORB_LGBTQ_2MenRunning_img_300x300_20220222.jpg?impolicy=fcrop&w=300&h=300&q=mediumHigh" alt="">
+                <img  src="https://forever.travel-assets.com/flex/flexmanager/images/2021/08/23/ORB_MQ-TS_HU_164x152.jpg?impolicy=fcrop&w=300&h=300&q=mediumHigh" alt="">
+            </div>
+            <div>
+                <h2>Travel As You Are</h2>
+                <p>Find LGBTQ wellcoming Hotels,travel ideas,pride,events and more</p>
+                <h2>Hotels Under $99</h2>
+                <p>Find LGBTQ wellcoming Hotels,travel ideas,pride,events and more</p>
+        </div>
+        </div>
+      </div>
+      <div> <h2>Featured offered</h2>
+    <div>
+        <img id="poster" src="https://forever.travel-assets.com/flex/flexmanager/images/2020/09/28/desktop.jpg" alt=""></div>
+    </div>
+    
+    <div><h2>Travel Tips For Pros</h2></div>
+    <div id="travel">
+        <img src="https://forever.travel-assets.com/flex/flexmanager/images/2020/05/06/airstream.jpeg?impolicy=fcrop&w=900&h=386&q=mediumHigh" alt="">
+        <img src="https://forever.travel-assets.com/flex/flexmanager/images/2020/05/06/glamping2.jpeg?impolicy=fcrop&w=900&h=386&q=mediumHigh" alt="">
+        <img src="https://forever.travel-assets.com/flex/flexmanager/images/2020/07/20/roadtripapp.jpeg?impolicy=fcrop&w=900&h=386&q=mediumHigh" alt="">
+    
+    </div>
+    <div><h2>Vacation your way</h2></div>
+    <div id="vacation">
+        <img src="https://forever.travel-assets.com/flex/flexmanager/images/2020/07/31/ORB_Affinity_PetFriendly_imgB_444x444_20200731.jpg?impolicy=fcrop&w=300&h=300&q=mediumHigh" alt="">
+        <img src="https://forever.travel-assets.com/flex/flexmanager/images/2020/07/31/ORB_Affinity_Luxury_imgB_444x444_20200731.jpg?impolicy=fcrop&w=300&h=300&q=mediumHigh" alt="">
+        <img src="https://forever.travel-assets.com/flex/flexmanager/images/2020/07/31/ORB_Affinity_AllInclusive_imgB_444x444_20200731.jpg?impolicy=fcrop&w=300&h=300&q=mediumHigh" alt="">
+        <img src="https://forever.travel-assets.com/flex/flexmanager/images/2020/07/31/ORB_Affinity_LastMinute_imgB_444x444_20200731.jpg?impolicy=fcrop&w=300&h=300&q=mediumHigh" alt="">
+        <img src="https://forever.travel-assets.com/flex/flexmanager/images/2020/07/31/ORB_Affinity_Beach_imgB_444x444_20200731.jpg?impolicy=fcrop&w=300&h=300&q=mediumHigh" alt="">
+        <img src="https://forever.travel-assets.com/flex/flexmanager/images/2020/07/31/ORB_Affinity_Romantic_imgB_444x444_20200731.jpg?impolicy=fcrop&w=300&h=300&q=mediumHigh" alt="">
+    </div>
+    
+    <div>
+    
+</body>
+</html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #navbar{
+            display: flex;
+            justify-content: space-around;
+            background-color: rgb(116, 116, 252);
+            padding: 10px;
+        }
+        #navbar>div>a:hover{
+            color: white;
+        }
+        #navbar>div>a{
+            color: black;
+        }
+        a{
+            text-decoration: none;
+        }
+        #navbar a{
+            cursor: pointer;
+        }
+        #container{
+            width: 80%;
+            display: grid;
+            margin: auto;
+            margin-top: 50px;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: auto;
+            gap: 30px;
+            /* border: 1px solid red; */
+        }
+        #container>div{
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+        }
+        /* #container>div:hover{
+            transform: scale(1.02);
+        } */
+        img{
+            width: 100%;
+        }
+        p{
+            font-size: 14px;
+            padding-left: 20px;
+        }
+        #pricebox{
+            display: flex;
+            /* border: 1px solid red; */
+            justify-content: space-between;
+            align-items: center;
+            margin: -18px 90px 0px 20px;
+        }
+        /* #pricebox>div{
+            border: 1px solid blue;
+        } */
+        strike{
+            color: gray;
+        }
+        button{
+            display: block;
+            margin: auto;
+            padding: 10px 30px;
+            color: blue;
+            font-weight: bold;
+            background-color: white;
+            border: 1px solid blue;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+        button:hover{
+            background-color: blue;
+            color: white;
+        }
+
+        #displayValue{
+            text-align: right;
+            margin: 30px;
+            font-size: 20px;
+
+        }
+
+        #form2{
+            width: 300px;
+            margin: auto;
+            margin-top: 50px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+            padding: 20px;
+            border-radius: 5px;
+        }
+      
+        input[type="password"]{
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+            font-size: 14px;
+        }
+        input[type="submit"]{
+            display: block;
+            margin: auto;
+            padding: 10px 20px;
+            border: 1px solid blue;
+            border-radius: 5px;
+            background-color: white;
+            font-weight: bold;
+            color: blue;
+        }
+        input[type="submit"]:hover{
+            background-color: blue;
+            color: white;
+        }
+
+        #checkuout{
+            display: block;
+            margin: auto;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+      
+
+         /* Medium screens */
+        @media only screen and (min-width: 421px) and (max-width: 780px) {
+            #container{
+            
+                grid-template-columns: repeat(2,1fr);
+                
+            }
+        }
+        
+        /* small screens */
+        @media only screen and (min-width: 70px) and (max-width: 420px) {
+            #container{
+            
+            grid-template-columns: repeat(1,1fr);
+            
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="navbar">
+        <div><a href="index.html">Home page</a></div>
+        <div><a href="support.html">Support</a></div>
+        <div><a href="signin.html">Signup</a></div>
+        <div><a href="login.html">Login</a></div>
+    </div>
+    <!-- <h1>Cart page</h1> -->
+    <p id="displayValue"></p>
+    
+    <form id="form2">
+        <label for="">Enter Promo code to get 30% discount</label> <br>
+        <input id="promo" type="password" name="promo" placeholder="Enter Promo code"> <br>
+        <input type="submit" value="Apply Promo">
+    </form>
+
+</body>
+</html>
+
+<script>
+    var cartData1 = JSON.parse(localStorage.getItem("cart"))
+    // console.log(cartData1);
+    var total = cartData1.reduce(function(sum,el,index,arr){
+        return sum + Number(el.price)
+    },0);
+    // localStorage.setItem("total",total);
+    // var total = localStorage.getItem("total");
+    var length = cartData1.length;
+
+   
+
+    //Apply promo function
+    document.querySelector("#form2").addEventListener("submit",function(){
+        event.preventDefault();
+        var code = document.querySelector("#promo").value;
+        applyPromo(code);
+    });
+
+    function applyPromo(code){
+        code = code.trim();
+        if(code == "masai30"){
+            localStorage.setItem("userPromo",code)
+            alert("Hurray you got 30% discount")
+            document.querySelector("#form2").reset();
+        }else if(code == ""){
+            alert("Please Enter Promo code")
+        }else if(code != "masai30"){
+            alert("Please Enter valid Promo code")
+        }
+        displayTotal(length,total);
+        window.location.reload();
+    }
+    
+
+    total = displayTotal(length,total);
+    
+    function displayTotal(length,total){
+        var userPromo = localStorage.getItem("userPromo");
+        console.log("userPromo")
+        if(userPromo != null)
+        {
+            total = (total*70)/100;
+        }
+        
+        document.querySelector("p").innerText = `You have ${length} items in cart and Total is Rs ${total}`
+        return total;
+    }
+
+    var container = document.createElement("div");
+    container.setAttribute("id","container");
+    document.querySelector("body").append(container);
+    // var cartData = JSON.parse(localStorage.getItem("cart")) || [];
+
+    cartData1.map(function(el){
+        var box = document.createElement("div");
+        
+        var img = document.createElement("img");
+        img.src = el.image_url;
+
+        var name = document.createElement("p");
+        name.textContent = el.name;
+
+        var pricebox = document.createElement("div")
+        pricebox.setAttribute("id","pricebox")
+
+        var div1 = document.createElement("div")
+        var price = document.createElement("h3");
+        price.textContent = el.price;
+        div1.append(price);
+        
+        var div2 = document.createElement("div")
+        var striked = document.createElement("strike");
+        striked.textContent = el.strikedoffprice;
+        // striked.style.textDecoration = strike line-through
+        div2.append(striked);
+
+        pricebox.append(div1,div2);
+
+        var btn = document.createElement("button");
+        // btn.setAttribute("id","btn")
+        btn.textContent = "Remove";
+        btn.addEventListener("click", function(){
+            removeItem(el);
+        });
+
+        // box.append(img,name,prices);
+        box.append(img,name,pricebox,btn);
+        document.querySelector("#container").append(box);
+    });
+
+    function removeItem(el,index){
+        console.log(el,index);
+        cartData1.splice(index,1)
+        console.log(cartData1);
+        localStorage.setItem("cart",JSON.stringify(cartData1));
+        window.location.reload();
+    }
+
+    var button = document.createElement("Button");
+    button.setAttribute("id","checkuout")
+    button.textContent = "Procced for payment"
+    document.querySelector("body").append(button)
+    document.querySelector("#checkuout").addEventListener("click",function(){
+        event.preventDefault();
+        window.location.reload();
+        checkoutPayment(total)
+    });
+    function checkoutPayment(total){
+        localStorage.setItem("total",total)
+        window.location.href = "checkout.html";
+    }
+</script>

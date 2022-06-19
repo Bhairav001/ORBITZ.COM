@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         #navbar{
+            display: flex;
+            justify-content: space-around;
+            background-color: rgb(116, 116, 252);
+            padding: 10px;
+        }
+        #navbar>div>a:hover{
+            color: white;
+        }
+        #navbar>div>a{
+            color: black;
+        }
+        a{
+            text-decoration: none;
+        }
+        #navbar a{
+            cursor: pointer;
+        }
+
+
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #container{
+            width: 80%;
+            display: grid;
+            margin: auto;
+            margin-top: 50px;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: auto;
+            gap: 30px;
+            /* border: 1px solid red; */
+        }
+        #container>div{
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+        }
+        /* #container>div:hover{
+            transform: scale(1.02);
+        } */
+        img{
+            width: 100%;
+        }
+        p{
+            font-size: 14px;
+            padding-left: 20px;
+        }
+        #pricebox{
+            display: flex;
+            /* border: 1px solid red; */
+            justify-content: space-between;
+            align-items: center;
+            margin: -18px 90px 0px 20px;
+        }
+        /* #pricebox>div{
+            border: 1px solid blue;
+        } */
+        strike{
+            color: gray;
+        }
+        button{
+            display: block;
+            margin: auto;
+            padding: 10px 30px;
+            color: blue;
+            font-weight: bold;
+            background-color: white;
+            border: 1px solid blue;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+        button:hover{
+            background-color: blue;
+            color: white;
+        }
+
+         /* Medium screens */
+        @media only screen and (min-width: 421px) and (max-width: 780px) {
+            #container{
+            
+                grid-template-columns: repeat(2,1fr);
+                
+            }
+        }
+        
+        /* small screens */
+        @media only screen and (min-width: 70px) and (max-width: 420px) {
+            #container{
+            
+            grid-template-columns: repeat(1,1fr);
+            
+            }
+            
+        }
+        a{
+          margin-left: 950px;
+          font-size: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="navbar">
+       
+      
+      
+        <div><a href="cart.html">Cart</a></div>
+    </div>
+    <select id="sortPrice" onchange="handleByPrice()">
+        <option value="">Sort By Price</option>
+        <option value="HTL">High to Low</option>
+        <option value="LTH">Low to High</option>
+      </select>
+  
+      <select id="sortNames" onchange="handleByName()">
+        <option value="">Sort By Name</option>
+        <option value="asc">Ascending</option>
+        <option value="dec">Descending</option>
+      </select>
+</body>
+</html>
+<script>
+    //  Mumbai to delhi
+// there are 10 objects in stays
+
+
+let  mensData=[
+{name:"Nanda Devi base camp",
+    image_url:"https://mediaim.expedia.com/localexpert/2330793/c9a6a083-afab-47aa-a384-0b8b51768b6a.jpg?impolicy=resizecrop&rw=500&rh=280",
+    price:4539,
+    },
+    
+    {name:"Bhamtal Trek",
+    image_url:"https://mediaim.expedia.com/localexpert/2581975/1d697151-0ad7-4972-b6a9-b82caa7986a6.jpg?impolicy=resizecrop&rw=500&rh=280",
+    price:4431,
+    },
+    
+    {name:"Private house boat cruise",
+    image_url:"https://mediaim.expedia.com/localexpert/2581957/fa7c4038-9132-4c6b-bc1d-0b42237c2ec9.jpg?impolicy=resizecrop&rw=500&rh=280",
+    price:3360,
+    },
+    
+    {name:"Chetinadi crafts and culture",
+    image_url:"https://mediaim.expedia.com/localexpert/1134214/ca870e0e-b308-4eff-8700-3a66e8589e8a.jpg?impolicy=resizecrop&rw=500&rh=280",
+    price:2211,
+    },
+    
+    {name:"Dharamshala half day tour",
+    image_url:"https://mediaim.expedia.com/localexpert/991642/626f715b-38cc-446a-84de-4a628f9765ed.jpg?impolicy=resizecrop&rw=500&rh=280",
+    price:3104,
+    },
+    
+    {name:"Himalaya  Camping in Chile",
+    image_url:"https://mediaim.expedia.com/localexpert/2819522/0c6516f7-5c30-4d15-8425-c02b596d4b98.jpg?impolicy=resizecrop&rw=500&rh=280",
+    price:4355,
+    },
+    
+    
+    {name:"Lamkaga Pass Trek",
+    image_url:"https://mediaim.expedia.com/localexpert/2329955/6283872f-d319-47f2-b110-5b50f0f5181f.jpg?impolicy=resizecrop&rw=500&rh=280",
+    price:6587,
+    },
+    {name:"Gangtok City walk",
+    image_url:"https://mediaim.expedia.com/localexpert/1045068/eb83f51a-ae11-4574-b061-259174b3ec7f.jpg?impolicy=resizecrop&rw=500&rh=280",
+    price:4539,
+    },
+    
+    {name:"Manipur Tour",
+    image_url:"https://mediaim.expedia.com/localexpert/623264/8319d091-bf00-4fd4-803c-9937a381ec93.jpg?impolicy=resizecrop&rw=500&rh=280",
+    price:5706,
+    },
+    {name:"Nagaland and Assam Soft Trecking Village",
+    image_url:"https://mediaim.expedia.com/localexpert/3137005/90c06dcf-6930-4ce3-ab40-a2b245d87d2b.jpg?impolicy=resizecrop&rw=500&rh=280",
+    price:5375,
+    }
+]
+// to call displayData function
+window.addEventListener("load", function(){
+      displayData( ThingstoDo);
+    });
+
+    // Sort By Price
+    function handleByPrice(){
+      var selected = document.querySelector("#sortPrice").value;
+      // console.log(selected)
+      if(selected == "") window.location.reload();
+      // Sort Low to High
+      if(selected == "LTH"){
+        ThingstoDo.sort(function(a,b){
+          return a.price - b.price ;
+        });
+        displayData( ThingstoDo);
+      }
+
+      // Sort High to Low
+      if(selected == "HTL"){
+        ThingstoDo.sort(function(a,b){
+          return b.price - a.price ;
+        });
+        displayData(ThingstoDo);
+      }
+    }
+
+
+     // to call displayData function
+     window.addEventListener("load", function(){
+      displayData(mensData);
+    });
+
+    // Sort By Price
+    function handleByPrice(){
+      var selected = document.querySelector("#sortPrice").value;
+      // console.log(selected)
+      if(selected == "") window.location.reload();
+      // Sort Low to High
+      if(selected == "LTH"){
+        mensData.sort(function(a,b){
+          return a.price - b.price ;
+        });
+        displayData(mensData);
+      }
+
+      // Sort High to Low
+      if(selected == "HTL"){
+        mensData.sort(function(a,b){
+          return b.price - a.price ;
+        });
+        displayData(mensData);
+      }
+    }
+
+
+    // Sort By Names
+    function handleByName(){
+      var selected = document.querySelector("#sortNames").value;
+      // console.log(selected);
+
+      if(selected == "") window.location.reload();
+      
+      if(selected == "asc"){
+        mensData.sort(function(a,b){
+          if(a.name > b.name) return 1;
+          if(a.name < b.name) return -1;
+          return 0;
+        });
+        displayData(mensData);
+      }
+
+      if(selected == "dec"){
+        mensData.sort(function(a,b){
+          if(a.name > b.name) return -1;
+          if(a.name < b.name) return 1;
+          return 0;
+        });
+        displayData(mensData);
+      }
+    }
+
+    // Filter By Brand
+    function handleBrandFilter(){
+      var selected = document.querySelector("#filterBrand").value;
+      // console.log(selected);
+      if(selected == "") window.location.reload();
+      else{
+        var filteredList = mensData.filter(function(el){
+          return el.brand == selected;
+        });
+        // console.log(filteredList);
+        displayData(filteredList);
+      }
+    }
+
+    var container = document.createElement("div");
+    container.setAttribute("id","container");
+    document.querySelector("body").append(container);
+    var cartData = JSON.parse(localStorage.getItem("cart")) || [];
+
+   function displayData(mensData){
+    document.querySelector("#container").innerText = "";
+    
+
+      mensData.map(function(el){
+        var box = document.createElement("div");
+        
+        var img = document.createElement("img");
+        img.src = el.image_url;
+
+        var name = document.createElement("p");
+        name.textContent = el.name;
+
+        var brandName = document.createElement("p");
+        brandName.textContent = el.brand
+
+        var pricebox = document.createElement("div")
+        pricebox.setAttribute("id","pricebox")
+
+        var div1 = document.createElement("div")
+        var price = document.createElement("h3");
+        price.textContent = el.price;
+        div1.append(price);
+        
+        var div2 = document.createElement("div")
+        var striked = document.createElement("strike");
+        striked.textContent = el.strikedoffprice;
+        // striked.style.textDecoration = strike line-through
+        div2.append(striked);
+
+        pricebox.append(div1,div2);
+
+        var btn = document.createElement("button");
+        btn.setAttribute("id","btn")
+        btn.textContent = "Add to Cart";
+        btn.addEventListener("click", function(){
+            addToCart(el);
+        });
+
+        // box.append(img,name,prices);
+        box.append(img,name,brandName,pricebox,btn);
+        document.querySelector("#container").append(box);
+      });
+
+      function addToCart(el){
+        // console.log(el);
+        cartData.push(el);
+        localStorage.setItem("cart",JSON.stringify(cartData));
+        alert("Item added to cart");
+      }
+
+   }
+    
+</script>

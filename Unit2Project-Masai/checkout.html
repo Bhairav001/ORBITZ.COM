@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Page</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #navbar{
+            display: flex;
+            justify-content: space-around;
+            background-color: rgb(116, 116, 252);
+            padding: 10px;
+        }
+        #navbar>div > a:hover{
+            color: white;
+        }
+        #navbar>div>a{
+            color: black;
+        }
+        a{
+            text-decoration: none;
+        }
+        #navbar a{
+            cursor: pointer;
+        }
+
+        #form2{
+            width: 300px;
+            margin: auto;
+            margin-top: 50px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+            padding: 20px;
+            border-radius: 5px;
+        }
+      
+        input[type="text"],input[type="month"],input[type="password"]{
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+            font-size: 14px;
+        }
+        input[type="submit"]{
+            display: block;
+            margin: auto;
+            padding: 10px 20px;
+            border: 1px solid blue;
+            border-radius: 5px;
+            background-color: white;
+            font-weight: bold;
+            color: blue;
+        }
+        input[type="submit"]:hover{
+            background-color: blue;
+            color: white;
+        }
+        h2{
+            margin-top: 3px;
+        }
+
+
+    </style>
+</head>
+<body> 
+    <div id="navbar">
+        <div><a href="index.html">Home Page</a></div>
+       
+    </div>
+  
+    <form id="form2">
+        <h2>Payment Details</h2>
+        <label for="">Credit / Debit / ATM Card</label> <br>
+        <input id="cardNum" type="text" name="cardNumber" maxlength="16" autocomplete="cc-number" placeholder="Enter Card number"> <br>
+        <label for="">CCV</label> <br>
+        <input id="ccv" type="password" name="ccv" autocomplete="cc-csc" maxlength="4" placeholder="Enter mobile number"> <br>
+        <label for=""> Expiry data</label> <br>
+        <input id="exp" type="month" name="month" placeholder="Enter month"> <br>
+        <!-- <input id="year" type="year" name="year" placeholder="Enter year"> <br> -->
+        <label for="">Name as per Card</label><br>
+        <input id="name" type="text" placeholder="Enter your name"> <br>
+        <input id="sendOtp" type="submit" value="Send OTP">
+    </form>
+</body>
+</html>
+
+<script>
+    document.querySelector("#form2").addEventListener("submit", crossCheck);
+
+    function crossCheck(){
+        event.preventDefault();
+        var cardNum = document.querySelector("#cardNum").value;
+        var ccv = document.querySelector("#ccv").value;
+        var expiry = document.querySelector("#exp").value;
+        
+        // console.log(cardNum,ccv,expiry);
+
+        if(cardNum == "9999999999999999" && ccv == "1234" && expiry == "2022-05"){
+            alert("OTP Send Successfully");
+            window.location.href = "OTP.html";
+        }else{
+            alert("Enter Valid Card Details")
+            window.location.reload();
+        }
+        
+
+    }
+</script>

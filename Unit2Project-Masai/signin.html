@@ -1,0 +1,203 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp Page</title>
+    <script src="https://kit.fontawesome.com/4f1332504f.js" crossorigin="anonymous"></script>
+    <style>
+          *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #navbar{
+            display: flex;
+            justify-content: space-around;
+            /* background-color: rgb(116, 116, 252); */
+            padding: 10px;
+            border-top: 1px solid  rgb(97,97,97);
+            border-bottom: 1px solid ;
+        }
+        #navbar>div{
+            width: 100px;
+            padding-right: 400px;
+            padding-top: 10px;
+            font-size: 28px;
+            color: teal;
+        }
+        #navbar>img{
+            padding-right: 500px;
+            height: 50px;
+            width: 200px;
+        }
+        #navbar>div > a:hover{
+            color: white;
+        }
+        #navbar>div>a{
+            color: black;
+        }
+        a{
+            text-decoration: none;
+        }
+        #navbar a{
+            cursor: pointer;
+        }
+        #navbar>img{
+            width: 200px;
+            height: 50px;
+        }
+
+        #form{
+            width: 400px;
+            margin: auto;
+            margin-top: 50px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        /* #form>h2{
+            text-align: center;
+        } */
+        #form>div>a{
+            width: 20px;
+            height: 20px;
+            /* display: flex; */
+            gap: 2rem;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            /* border: 1px solid red; */
+        }
+        #form>div{
+            display: flex;
+            gap: none;
+            margin-left: auto;
+            margin-right: auto;
+            /* display: block; */
+        }
+        #form>p{
+            font-size: 80%;
+            color: rgb(97,97,97);
+        }
+        #para+p{
+            display: flex;
+            justify-content: center;
+        }
+        #para+p+p{
+            display: flex;
+            justify-content: center;
+        }
+        #form>h4{
+            color:  rgb(97,97,97);
+            font-size: 90%;
+        }
+        input[type="email"],input[type="text"],input[type="Lasttext"],input[type="password"],textarea{
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+            font-size: 14px;
+        }
+        input[type="submit"]{
+            display: block;
+            margin: auto;
+            padding: 10px 10px;
+            border: 1px solid rgb(200,50,89);
+            border-radius: 5px;
+            background-color:rgb(200,50,89);
+            font-weight: bold;
+            color: white;
+            width: 400px;
+        }
+
+        input[type="submit"]:hover{
+            background-color: rgb(200,50,89);
+            color: white;
+        }
+        input.check{
+            background-color: red;
+            height: 20px;
+            width: 20px;
+        }
+        h2{
+            margin-top: 3px;
+        }
+        #Arrow a{
+            text-decoration: none;
+        }
+        #navbar>div a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <!-- <div><a href="signup.html">Signup</a></div>
+        <div><a href="login.html">Login</a></div> -->
+        <div>
+           <a href="index.html"> <i class="fa-solid fa-arrow-left"></i></a> 
+        </div>
+        <img src="https://www.orbitz.com/_dms/interstitial/logo.svg?locale=en_US&siteid=70201" alt="">
+    </div>
+    <form id="form">
+        <h2>Create an account</h2>
+        <input id="email" type="email" name="email" placeholder="Email address"> <br>
+         <input id="name" type="text" name="name" placeholder="First name"><br>
+         <input id="LastName" type="Lasttext" name="LastName" placeholder="Last name"><br>
+        <input id="pass" type="password" placeholder="Password"> <br>
+        
+        <h4><input type="checkbox" class="check"> Keep me signed in</h4>
+        <p>
+            Selecting this checkbox will keep you signed into your account on this device until you sign out. Do not select this on shared devices.</p>
+       <p>
+        By creating an account, I agree to the Orbitz
+         <a href="https://www.orbitz.com/lp/lg-terms">  Terms and Conditions</a>, 
+         <a href="https://www.orbitz.com/lp/lg-privacy"> Privacy Statement</a> 
+         and <a href="https://www.orbitz.com/rewards/terms"> Orbitz Rewards Terms and Conditions.</a>
+       </p> 
+        <input type="submit" value="Continue" id="para">
+            <p>Already have an account?<a href="login.html">Sign in</a></p>
+            <p>or continue with</p>
+        <div>
+            <a href="https://appleid.apple.com/auth/authorize?response_type=code&client_id=com.orbitz.iphoneprod.release&response_mode=form_post&scope=name%20email&state=rAIddSLBV_rWo_k7XM32UCdkz-reoaIMXUu1VLFKMbk&nonce=C2EC3JDX2nhWvQzlNeWDHe4qUROBP7fqlZSVxJFALYU&redirect_uri=https://www.orbitz.com/eg-auth-svcs/api/v1/oauth2/callback/apple-web&locale=en_US">
+                <img src="https://a.travel-assets.com/egds/marks/apple.svg" alt="">
+            </a>
+            <a href="https://www.facebook.com/Orbitz/">
+                <img src="https://a.travel-assets.com/egds/marks/facebook.svg" alt="">
+            </a>
+           
+        </div>
+    </form>
+</body>
+</html>
+<script>
+    document.querySelector("form").addEventListener("submit",ContinueFun);
+    let userData = JSON.parse(localStorage.getItem("userCreds")) || [];
+    function ContinueFun(){
+        event.preventDefault();
+
+        var userObj = {
+            email:document.querySelector("#email").value,
+            name:document.querySelector("#name").value,
+            LastName:document.querySelector("#LastName").value,
+            password:document.querySelector("#pass").value
+        };
+        console.log(userObj);
+        if(userObj.email == "" || userObj.name == "" || userObj.LastName == "" || userObj.password == ""){
+            alert("Enter All details first");
+        } 
+        else {
+            userData.push(userObj);
+
+            localStorage.setItem("userCreds",JSON.stringify(userData))
+            alert("Sign Up Successfully")
+            window.location.href = "login.html";
+            document.querySelector("form").reset();
+        }
+    }
+</script>

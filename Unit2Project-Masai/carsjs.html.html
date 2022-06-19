@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         #navbar{
+            display: flex;
+            justify-content: space-around;
+            background-color: rgb(116, 116, 252);
+            padding: 10px;
+        }
+        #navbar>div>a:hover{
+            color: white;
+        }
+        #navbar>div>a{
+            color: black;
+        }
+        a{
+            text-decoration: none;
+        }
+        #navbar a{
+            cursor: pointer;
+        }
+
+
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #container{
+            width: 80%;
+            display: grid;
+            margin: auto;
+            margin-top: 50px;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: auto;
+            gap: 30px;
+            /* border: 1px solid red; */
+        }
+        #container>div{
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+        }
+        /* #container>div:hover{
+            transform: scale(1.02);
+        } */
+        img{
+            width: 100%;
+        }
+        p{
+            font-size: 14px;
+            padding-left: 20px;
+        }
+        #pricebox{
+            display: flex;
+            /* border: 1px solid red; */
+            justify-content: space-between;
+            align-items: center;
+            margin: -18px 90px 0px 20px;
+        }
+        /* #pricebox>div{
+            border: 1px solid blue;
+        } */
+        strike{
+            color: gray;
+        }
+        button{
+            display: block;
+            margin: auto;
+            padding: 10px 30px;
+            color: blue;
+            font-weight: bold;
+            background-color: white;
+            border: 1px solid blue;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+        button:hover{
+            background-color: blue;
+            color: white;
+        }
+
+         /* Medium screens */
+        @media only screen and (min-width: 421px) and (max-width: 780px) {
+            #container{
+            
+                grid-template-columns: repeat(2,1fr);
+                
+            }
+        }
+        
+        /* small screens */
+        @media only screen and (min-width: 70px) and (max-width: 420px) {
+            #container{
+            
+            grid-template-columns: repeat(1,1fr);
+            
+            }
+            
+        }
+        a{
+            margin-left: 950px;
+            font-size: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <div><a href="cart.html">Cart</a></div>
+    </div>
+</body>
+</html>
+<script>
+    //  Mumbai to delhi
+// there are 10 objects in stays
+
+
+let cars=[
+    {name: "ford figo", 
+    image_url:"https://mediaim.expedia.com/cars/41/01524247-e521-4941-a996-5840166aa2a9.jpg?impolicy=resizecrop&ra=fit&rh=165&rw=165",
+class:"economy",
+price:1250},
+
+
+{name: "Hyundai Grand", 
+image_url:"https://mediaim.expedia.com/cars/41/322b9191-337a-4f57-b168-2bc78a963554.jpg?impolicy=resizecrop&ra=fit&rh=165&rw=165",
+class:"Mini",
+price:3500},
+
+
+{name: "Maruthi Swift", 
+image_url:"https://mediaim.expedia.com/cars/41/bd92f20c-853a-4d39-a571-fdf2d256dae3.jpg?impolicy=resizecrop&ra=fit&rh=165&rw=165",
+class:"Compact",
+price:1100},
+
+
+{name: "Toyota Etios", 
+image_url:"https://mediaim.expedia.com/cars/41/fc1eaef9-1bd7-407f-9309-777b9c9a1ae2.jpg?impolicy=resizecrop&ra=fit&rh=165&rw=165",
+class:"Midsize",
+price:5005},
+
+
+{name: "Honda City", 
+image_url:"https://mediaim.expedia.com/cars/41/7513a00e-5fdd-4c58-8c9c-af1103be87bf.jpg?impolicy=resizecrop&ra=fit&rh=165&rw=165",
+class:"Luxury",
+price:1285},
+
+
+{name: "Mahindra Scorpio", 
+image_url:"https://mediaim.expedia.com/cars/41/4599604d-6c8f-4485-b7b3-b354301de9b8.jpg?impolicy=resizecrop&ra=fit&rh=165&rw=165",
+class:"Luxury SUV",
+price:5889},
+
+
+{name: "Hyundai Creta", 
+image_url:"https://mediaim.expedia.com/cars/41/c3c4c6aa-7938-4a35-a0f5-b28f7710d0e5.jpg?impolicy=resizecrop&ra=fit&rh=165&rw=165",
+class:"Premium SUV",
+price:6788},
+
+
+{name: "Mahindra XUV - 500", 
+image_url:"https://mediaim.expedia.com/cars/41/dcf776f0-b661-4f08-86a9-185e0bea3362.jpg?impolicy=resizecrop&ra=fit&rh=165&rw=165",
+class:"Fullsize SUV",
+price:7775},
+
+{name: "Toyota Camry", 
+image_url:"https://mediaim.expedia.com/cars/41/73fd0a44-aea1-4f2c-92f3-7e1fccdd2385.jpg?impolicy=resizecrop&ra=fit&rh=165&rw=165",
+class:"Midsize",
+price:1844},
+
+{name: "Toyota Innova ", 
+image_url:"https://mediaim.expedia.com/cars/41/6a7c63a9-f733-47ef-bbf1-1800ed3ad1a7.jpg?impolicy=resizecrop&ra=fit&rh=165&rw=165",
+class:"Fullsize Van",
+price:7883},
+]
+var container = document.createElement("div");
+    container.setAttribute("id","container");
+    document.querySelector("body").append(container);
+    var cartData = JSON.parse(localStorage.getItem("cart")) || [];
+
+    
+    cars.map(function(el){
+        var box = document.createElement("div");
+        
+        var img = document.createElement("img");
+        img.src = el.image_url;
+
+        var name = document.createElement("p");
+        name.textContent = el.name;
+
+        var pricebox = document.createElement("div")
+        pricebox.setAttribute("id","pricebox")
+
+        var div1 = document.createElement("div")
+        var price = document.createElement("h3");
+        price.textContent = el.price;
+        div1.append(price);
+        
+        var div2 = document.createElement("div")
+        var striked = document.createElement("strike");
+        striked.textContent = el.class;
+        // striked.style.textDecoration = strike line-through
+        div2.append(striked);
+
+        pricebox.append(div1,div2);
+
+        var btn = document.createElement("button");
+        btn.setAttribute("id","btn")
+        btn.textContent = "Add to Cart";
+        btn.addEventListener("click", function(){
+            addToCart(el);
+        });
+
+        // box.append(img,name,prices);
+        box.append(img,name,pricebox,btn);
+        document.querySelector("#container").append(box);
+    });
+
+    function addToCart(el){
+        // console.log(el);
+        cartData.push(el);
+        localStorage.setItem("cart",JSON.stringify(cartData));
+        alert("Item added to cart");
+    }
+</script>

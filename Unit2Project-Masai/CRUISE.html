@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cruises</title>
+    <style>
+         #navbar{
+            width: auto;
+            height: 100px;
+            background-color: #00253c;
+            display: flex;
+        }
+        img{
+            margin-top: 25px;
+            margin-left: 70px;
+        }
+        select{
+            /* margin-left: 0px; */
+            height: 20px;
+            margin-top: 40px;
+            border: #00253c;
+            background-color: #00253c;
+            color: white;
+            text-align: start;
+            font-size: 15px;
+            
+        }
+        option{
+            background-color: white;
+            color: #00253c;
+            width: 300px;
+
+        }
+         #heading{
+            margin-left: 5%;
+            margin-top: 5%;
+        }
+        #destination{
+            width: 42%;
+            height: 45px;
+      
+    
+        }
+        #departearly{
+            width: 42%;
+            height: 40px;
+            margin-left: 0%;
+            margin-top: 20px;
+        }
+        #departlate{
+            width: 42%;
+            height: 40px;
+            margin-left: 0%;
+        }
+        #traveller{
+            width: 43%;
+            height: 45px;
+            margin-left: 2;
+
+        }
+        #box{
+            margin-left: 5%;
+            margin-top: 2%;
+        }
+        button{
+            margin-left: 5%;
+            height: 40px;
+            width: 200px;
+            margin-top: 25px;
+            border: #c83259;
+            background-color: #c83259;
+            color: white;        
+        }
+        #bar{
+        display: flex;
+        color: white;
+        margin-left: 500px;
+       
+        margin-top: 20px;
+        font-size: 20px;
+       }
+       p{
+        margin-left: 20px;
+       }
+       a{
+        color: white;
+        text-align: center;
+       }
+      
+       
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <div><img src="https://www.orbitz.com/_dms/header/logo.svg?locale=en_US&siteid=70201&2" alt=""></div>
+       <select name="links" id="" size="1" onchange="window.location.href=this.value;">
+        <option value="More travel">more travel</option>
+        <option value="stays.html">Stays</option>
+            <option value="flights.html">Flights</option>
+            <option value="packages.html">Packages</option>
+            <option value="cars.html">Car</option>
+            <option value="CRUISE.html">cruise</option>
+            <option value="thingstodo.html">Things to Do</option>
+            <option value="Deals">Deals</option>
+            <option value="https://groups.orbitz.com/Group-Rate/?locale=en_US&ol=1">groups&meeting</option>
+            <option value="https://www.orbitz.com/blog/">Travel Vlog</option>
+       </select>
+       <div id="bar">
+        <p><a href="listproperty.html">List your Property</a></p>
+        <p><a href="support.html">Support</a></p>
+     
+        <p><a href="login.html">Log in</a></p>
+        <p><a href="signin.html">Sign in</a></p>
+     </div>
+        
+
+    </div>
+    <div id="heading"><h1>Search cruises</h1>
+        <p>For expert cruise advice, call 1-844-730-9892.</p>
+        
+        <br>
+        <select name="destination" id="destination">
+            <option value="select destination">Select destination</option>
+            <option value="caribian">Caribian</option>
+            <option value="bahamas">Bahamas</option>
+            <option value="maxico">Maxico</option>
+            <option value="alaska">Alaska</option>
+            <option value="urope">Urope</option>
+            <option value="barmuda">Barmuda</option>
+        </select>
+        <select name="traveller" id="traveller">
+            <option value="traveller">traveller</option>
+            <option value="2 traveller">2 traveller</option>
+            <option value="3 traveller">3 traveller</option>
+            <option value="4 traveller">4 traveller</option>
+        </select>
+    <input type="date" name="depart" placeholder="depart early" id="departearly">
+    <input type="date" name="depart" id="departlate" placeholder="depart late">
+    </div>
+      <div><button>Search</button></div>
+    
+</body>
+</html>
+<script>
+    document.querySelector("button").addEventListener("click",myfuct)
+
+    function myfuct(event){
+        event.preventDefault();
+
+        a=document.querySelector("#destination").value
+      
+
+        b=document.querySelector("#traveller").value
+
+        c=document.querySelector("#departearly").value
+
+        d=document.querySelector("#departlate").value
+
+        console.log(a,b,c,d)
+
+        if((a=="caribian" && b>1 )|| a=="bahamas" ||a=="maxico"||a=="alaska"||a=="urope"||a=="barmuda" ){
+            window.open('stay.js.html')
+        }else{
+            alert("Please Enter correct city and Travellers greater than 1")
+        }
+
+        
+
+       
+
+    }
+</script>

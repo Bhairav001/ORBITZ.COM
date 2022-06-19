@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flights</title>
+    <style>
+         #navbar{
+            width: auto;
+            height: 100px;
+            background-color: #00253c;
+            display: flex;
+        }
+        img{
+            margin-top: 25px;
+            margin-left: 70px;
+        }
+        select{
+            margin-left: 50px;
+            height: 20px;
+            margin-top: 40px;
+            border: #00253c;
+            background-color: #00253c;
+            color: white;
+            text-align: start;
+            font-size: 15px;
+            
+        }
+        option{
+            background-color: white;
+            color: #00253c;
+            width: 300px;
+
+        }
+         #heading{
+            margin-left: 5%;
+            margin-top: 5%;
+        }
+        #pickup{
+            width: 47%;
+            height: 40px;
+            margin-top: 20px;
+        }
+        #date1{
+            width: 22.5%;
+            height: 40px;
+            margin-left: 0%;
+        }
+        #date2{
+            width: 23%;
+            height: 40px;
+            margin-left: 1%;
+        }
+        #dropoff{
+            width: 47%;
+            height: 40px;
+            margin-left: 0%;
+
+        }
+        #box{
+            margin-left: 5%;
+            margin-top: 2%;
+        }
+        #search{
+            margin-left: 5%;
+            height: 40px;
+            width: 200px;
+            margin-top: 25px;
+            border: #c83259;
+            background-color: #c83259;
+            transition: 0.075;         
+        }
+        #btn{
+           
+            background-color: #b2d8dd;
+            height: 45px;
+            margin-right: 10px;  
+        }
+        #pickuptime{
+            width: 22.5%;
+            height: 40px;
+            margin-top: 1%;
+          
+
+        }
+        #dropuptime{
+            width: 22.9%;
+            height: 40px;
+            margin-left: 1%;
+        }
+        p{
+            margin-left: 5%;
+        }
+        #bar{
+        display: flex;
+        color: white;
+        margin-left: 500px;
+       
+        margin-top: 20px;
+        font-size: 20px;
+       }
+       p{
+        margin-left: 20px;
+       }
+       a{
+        color: white;
+        text-align: center;
+       }
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <div><img src="https://www.orbitz.com/_dms/header/logo.svg?locale=en_US&siteid=70201&2" alt=""></div>
+       <select name="links" id="" size="1" onchange="window.location.href=this.value;">
+        <option value="More travel">more travel</option>
+        <option value="stays.html">Stays</option>
+            <option value="flights.html">Flights</option>
+            <option value="packages.html">Packages</option>
+            <option value="cars.html">Car</option>
+            <option value="CRUISE.html">cruise</option>
+            <option value="thingstodo.html">Things to Do</option>
+            <option value="https://www.orbitz.com/Deals">Deals</option>
+            <option value="https://groups.orbitz.com/Group-Rate/?locale=en_US&ol=1">groups&meeting</option>
+            <option value="https://www.orbitz.com/blog/">Travel Vlog</option>
+       </select>
+       <div id="bar">
+        <p><a href="listproperty.html">List your Property</a></p>
+        <p><a href="support.html">Support</a></p>
+     
+        <p><a href="login.html">Log in</a></p>
+        <p><a href="signin.html">Sign in</a></p>
+     </div>
+        
+
+    </div>
+    <div id="heading"><h1>Find and compare car rentals</h1>
+        <button id="btn">Rental Cars</button><button id="btn">Airport Transportation</button>
+       
+        <br>
+        <input id="pickup" type="text" placeholder="pickup">
+        <input type="text" name="" id="dropoff" placeholder="dropoff">
+    <input type="date" name="date1"  id="date1">
+    <input type="date" name="date2" id="date2">
+    <input type="time" name="time" id="pickuptime" placeholder="Pick-Up Time">
+    <input type="time" name="" id="dropuptime" placeholder="Drop-Up Time">
+    </div>
+    <div><input type="checkbox" name="cheackbox" id="box">Include AARP member rates
+    <p>Membership is required and verified at pick-up.</p></div>
+      <div><button id="search">Search</button></div>
+      
+    
+</body>
+</html>
+<script>
+    document.querySelector("#search").addEventListener("click",myfuct)
+
+    function myfuct(event){
+        event.preventDefault();
+
+        a=document.querySelector("#pickup").value
+      
+
+        b=document.querySelector("#dropoff").value
+
+      
+        console.log(a,b)
+
+        if(a!==b){
+            window.open('carsjs.html.html')
+        }else{
+            alert("Pickup And Drooff Location Should Not Be Same")
+        }
+
+       
+
+    }
+</script>
