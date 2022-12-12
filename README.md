@@ -13,7 +13,6 @@ HTML | CSS | JavaScript | DOM
 About Project
 A combined team work project at Masai for duration of 5 days.
 
-Contributors
 Deeksha Purohit
 
 Omkar Solanki
